@@ -1,7 +1,6 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import fetch, { Response } from "node-fetch";
 import * as shell from "shelljs"
 import * as fs from 'fs';
 let myStatusBarItem: vscode.StatusBarItem;
@@ -44,7 +43,7 @@ function pretifypyth(meth:any=0){
 	}else{
         if(meth == 1){
             editor.edit(edit=>{
-                edit.replace(editor.selection, resp)
+                edit.replace(editor.selection, resp.substring(0, resp.length - 1))
             })
         }else{
             editor.edit(edit=>{
