@@ -53,7 +53,7 @@ function pretifypyth(meth:any=0){
                 edit.delete(textRange);
                 edit.insert(new vscode.Position(0,0),resp)
             })
-        }
+        }vscode.window.showInformationMessage('Beautifyed !')
 	}fs.unlinkSync('.python-beautifyer-tmp')
 }
 
