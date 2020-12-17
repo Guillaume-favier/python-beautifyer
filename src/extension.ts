@@ -55,7 +55,7 @@ function pretifypyth(meth:any=0){
                 edit.insert(new vscode.Position(0,0),resp)
             })
         }
-	}shell.rm('.python-beautifyer-tmp')
+	}fs.unlinkSync('.python-beautifyer-tmp')
 }
 
 export function activate(context: vscode.ExtensionContext) {
