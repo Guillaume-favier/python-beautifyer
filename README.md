@@ -15,6 +15,8 @@ You can do this in two way :
 
 ![VS code exemple of the status bar](https://zupimages.net/up/20/51/r3zq.gif)
 
+The extension will automatically detect your current indent style and adapt the beautifyer indentation
+
 ## Requirements
 
 You just need python3-pip (what you should already have if you are programing in python) and shelljs
