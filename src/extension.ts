@@ -1,6 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import { ConfigurationTarget, workspace } from 'vscode';
 import * as shell from "shelljs"
 import * as fs from 'fs';
 let myStatusBarItem: vscode.StatusBarItem;
@@ -35,8 +36,10 @@ function pretifypyth(meth:any=0){
 	}else{
 		text += editor.document.getText()
 	}
+	
 	fs.writeFileSync('.python-beautifyer-tmp',text)
-	var resp = shell.exec('yapf .python-beautifyer-tmp')
+	const cmd = 'yapf .python-beautifyer-tmp --style="{based_on_style: pep8, indent_width: '+String(editor.options.tabSize)+'}"'
+	var resp = shell.exec(cmd)
 	if(resp.code != 0){
 		vscode.window.showErrorMessage('They is one or more errors in your code.')
 		vscode.window.showErrorMessage('errors : '+resp)
