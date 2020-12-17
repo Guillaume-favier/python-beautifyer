@@ -3,7 +3,10 @@
 	"displayName": "Python beautify",
 	"description": "A python beautifyer for Vs code",
 	"publisher": "Guillaume-favier",
-	"repository": "",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Guillaume-favier/python-beautifyer"
+	},
 	"icon": "icon.png",
 	"version": "1.1.0",
 	"engines": {
