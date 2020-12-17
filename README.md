@@ -17,6 +17,8 @@ You can do this in two way :
 
 The extension will automatically detect your current indent style and adapt the beautifyer indentation
 
+![VS code exemple of the automatic indentation](https://zupimages.net/up/20/51/e6sv.gif)
+
 ## Requirements
 
 You just need python3-pip (what you should already have if you are programing in python) and shelljs
