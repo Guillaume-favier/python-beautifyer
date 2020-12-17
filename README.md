@@ -13,7 +13,7 @@ You can do this in two way :
    * `Python beautifyer addaptive` who wil check if there is a selection and will make the choice of converting all the page or the selection if there is one
  * In python files a new status will apared called : `python beautifyer` all at the right who will execute the `Python beautifyer addaptive`
 
-![VS code exemple of the status bar](url=https://zupimages.net/viewer.php?id=20/51/r3zq.gif)
+![VS code exemple of the status bar](https://zupimages.net/up/20/51/r3zq.gif)
 
 ## Requirements
 
