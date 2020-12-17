@@ -1,0 +1,66 @@
+{
+	"name": "python-beautify",
+	"displayName": "Python beautify",
+	"description": "A python beautifyer for Vs code",
+	"publisher": "Guillaume-favier",
+	"repository":"",
+	"icon":"icon.png",
+	"version": "1.1.0",
+	"engines": {
+		"vscode": "^1.52.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:python-beautify.beautifyfromselec",
+		"onCommand:python-beautify.beautifyfromallpage",
+		"onCommand:python-beautify.beautifylikeall",
+		"onLanguage:python"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "python-beautify.beautifyfromselec",
+				"title": "Python beautifyer form curent selection"
+			},
+			{
+				"command": "python-beautify.beautifyfromallpage",
+				"title": "Python beautifyer from all page"
+			},
+			{
+				"command": "python-beautify.beautifylikeall",
+				"title": "Python beautifyer addaptive"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"lint": "eslint src --ext ts",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.19.9",
+		"@types/vscode": "^1.52.0",
+		"@typescript-eslint/eslint-plugin": "^4.9.0",
+		"@typescript-eslint/parser": "^4.9.0",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	},
+	"dependencies": {
+		"@types/node-fetch": "^2.5.7",
+		"@types/shelljs": "^0.8.8",
+		"node-fetch": "^2.6.1",
+		"shelljs": "^0.8.4",
+		"vsce": "^1.81.1"
+	}
+}
